@@ -1,0 +1,41 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #3b5b8b;
+    color: #fff;
+    height: 7vh;
+}
+
+.header span {
+    color: #cdcdcd;
+}
+
+.header {
+    cursor: pointer;
+    margin: auto 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto 20px;
+    padding: 0;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0;
+        height: 10vh;
+    }
+    .header {
+        margin: 5px auto;
+    }
+}

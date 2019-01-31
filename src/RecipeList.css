@@ -1,0 +1,17 @@
+.recipes {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.recipe-list {
+    margin: 0;
+}
+
+@media (max-width: 580px) {
+    .recipe-list {
+        display: block;
+    }
+}
