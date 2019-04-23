@@ -9,21 +9,21 @@ class RecipeApp extends Component {
 		super(props);
 		this.state = {
 			recipes: [{
-				id: 1,
+				id: 0,
 				title: 'Pasta',
 				ingredients: ['flour', 'water'],
 				instructions: "Mix ingredients",
 				img: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/homemade-spaghetti-sauce-horizontal-1530890913.jpg?crop=1xw:1xh;center,top&resize=480:*",
 				alt: "plate of spaghetti"
 			}, {
-				id: 2,
+				id: 1,
 				title: 'Milkshake',
 				ingredients: ['Milk', 'Ice Cream'],
 				instructions: "Blend ingredients",
 				img: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/2/16/1/FNK_Mint-Julep-Milkshake_s4x3.jpg.rend.hgtvcom.616.462.suffix/1455708575891.jpeg",
 				alt: "two milkshakes in glasses"
 			}, {
-				id: 3,
+				id: 2,
 				title: 'Avocado Toast',
 				ingredients: ['Bread', 'Avocado', 'Pepper'],
 				instructions: "Smash ingredients",
@@ -32,13 +32,29 @@ class RecipeApp extends Component {
 			}],
 			nextRecipeId: 3, // adds custom id to each recipe
 		};
+		
+		this.handleSave = this.handleSave.bind(this);
+	}
+
+	handleSave(recipe) {
+		this.setState((prevState, props) => {
+			const newRecipe = {
+				...recipe,
+				id: this.state.nextRecipeId
+			}
+			
+			return {
+				recipes: [...this.state.recipes, newRecipe],				
+				nextRecipeId: prevState.nextRecipeId + 1
+			}
+		});
 	}
 
 	render() {
 		return (
 			<div className="App">
 				<Navbar />
-				<RecipeInput />
+				<RecipeInput onSave={this.handleSave}/>
 				<RecipeList recipes={this.state.recipes}/> {/* Displays Recipe list items*/} 
 			</div>
 		);
