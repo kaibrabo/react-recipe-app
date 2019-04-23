@@ -11,12 +11,14 @@
 
 .recipe-card-img {
     overflow: hidden;
+    height: 250px;
 }
 
 .recipe-card img {
-    width: 100%;
-    height: auto;
-    max-height: 250px;
+    width: auto;
+    height: 300px;
+    vertical-align: middle;
+    /*max-height: 250px;*/
 }
 
 .recipe-card-content {

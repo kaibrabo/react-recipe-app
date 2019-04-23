@@ -1,0 +1,51 @@
+.recipe-form-container {
+    width: 400px;
+    margin: 5px auto;
+    border: solid 5px #3b5b8b;
+    border-radius: 5px;
+}
+
+.recipe-form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.recipe-form-line,
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.recipe-form-line label,
+label, 
+textarea {
+    margin: 5px 15px 0 20px;
+}
+
+#recipe-title-input,
+#recipe-img-input {
+    border: none;
+    background: inherit;
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0 10px 0 0;
+}
+
+.ingredient-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    margin: 10px 0;
+}
+
+.button {
+    margin: 0 10px;
+    background: #3b5b8b;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+}

@@ -3,7 +3,7 @@ import './Link.css'
 
 class Link extends Component {
     render () {
-        const {name, link} = this.props;
+        const {name} = this.props;
         return(
             <li className="link">{name}</li>
         )
